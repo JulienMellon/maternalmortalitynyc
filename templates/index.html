@@ -1,0 +1,17 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Charts for Each Year</title>
+</head>
+<body>
+    <h1>Pie Charts for Each Year</h1>
+    <ul>
+        {% for year in years %}
+            <li><a href="{{ url_for('get_image', year=year) }}">View Pie Chart for {{ year }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
